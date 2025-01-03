@@ -38,7 +38,6 @@ Example: `http://127.0.0.1:5000/`
 This endpoint lists all available PDF files in the `documents` directory.
 
 **Request**:
-```bash
 curl -X GET http://127.0.0.1:5000/list_pdfs
 
 **Response:**
@@ -64,9 +63,6 @@ curl -X POST http://127.0.0.1:5000/earnings_transcript_summary \
 
 
 Response:
-
-json
-
 {
   "financial_performance": "Company XYZ reported an increase of 12% in quarterly earnings...",
   "market_dynamics": "The company noted a shift in demand trends in North America...",
