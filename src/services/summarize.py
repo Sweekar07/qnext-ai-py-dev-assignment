@@ -2,10 +2,16 @@ import logging
 import google.generativeai as genai
 import json
 from src.config.config import sys_prompt
+from dotenv import load_dotenv
+import os
 
 logger = logging.getLogger(__name__)
 
-genai.configure(api_key="AIzaSyABfSdfCdMdddCjw1fvBPzwN9tEo7E4OSM")
+# Load environment variables
+load_dotenv()
+
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=gemini_api_key)
 
 # Function to interact with Gemini API
 def summarize_transcript(company_name, transcript_text):
