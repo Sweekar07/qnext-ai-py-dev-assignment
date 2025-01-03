@@ -9,6 +9,12 @@ logger = logging.getLogger(__name__)
 
 def initialize_routes(app):
 
+    # Default Home Route
+    @app.route('/', methods=['GET'])
+    def home():
+        return jsonify({"message": "Welcome to the Home Page!"}), 200
+
+
     # Route to list PDF files
     @app.route('/list_pdfs', methods=['GET'])
     def list_pdfs():
